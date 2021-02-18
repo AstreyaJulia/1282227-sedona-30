@@ -21,6 +21,7 @@
   --additional-gray: #CACACA;
   --gray-shadow: rgba(0, 1, 1, 0.2);
   --gray-background: #EEEEEE;
+  --toggle-gray: #ABABAB;
 }
 
 /* Global */
@@ -113,6 +114,8 @@ button {
   text-transform: uppercase;
   border: none;
   padding: 3px 16px;
+  /* align-self: baseline;
+  text-align: center; защита от растягивания при изменении размера др кнопок*/
 }
 
 .btn-big,
@@ -160,6 +163,8 @@ button {
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   font-weight: 400;
+  margin-left: 85px;
+  padding: 7px 35px;
 }
 
 .btn-outline:hover {
@@ -267,16 +272,12 @@ button {
 
 .main-navigation-wrapper {
   background-color: var(--basic-white);
-  display: grid;
 }
 
 .nav-item {
-  display: block;
-}
-
-.nav-item a {
-  margin: 15px 72px;
-  display: block;
+  width: 228px;
+  text-align: left;
+  padding: 0;
 }
 
 /* Main page*/
@@ -404,8 +405,10 @@ button {
 
 .hotels-filter input {
   background-color: transparent;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
+  border: none;
+  padding: 4px 0;
+  /*border: 2px solid var(--basic-white);
+  border-radius: 2px;*/
 }
 
 .hotels-filter input::placeholder {
@@ -488,6 +491,8 @@ fieldset legend {
   line-height: 21px;
   background-color: var(--light-gray);
   padding: 3px 13px;
+  /* align-self: baseline;
+  text-align: center; защита от растягивания при изменении размера др кнопок*/
 }
 
 .hotel-link img {
@@ -577,7 +582,6 @@ fieldset legend {
   grid-column: 1/-1;
 }
 
-
 .search-form input[type="text"] {
   padding: 6px;
   padding-left: 13px;
@@ -605,12 +609,11 @@ fieldset legend {
   border-top: solid 1px var(--focus-gray);
   display: grid;
   grid-template-columns: 135px 29px 110px 6px 142px 1fr 110px;
-  grid-template-rows: min-content min-content 27px;
+  grid-template-rows: repeat(3, min-content);
 }
 
 .hotel-link {
   grid-column: 3/-2;
-  /*margin-left: 29px;*/
   display: flex;
 }
 
@@ -673,8 +676,10 @@ fieldset legend {
 
 .nav-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 0;
+  margin: 0 72px;
 }
 
 .find-hotel {
@@ -715,7 +720,7 @@ fieldset legend {
 }
 
 /* Layout Flex Catalog Page*/
-/*
+
 .hotels-filter form {
   display: flex;
   align-items: center;
@@ -726,6 +731,18 @@ fieldset legend {
   display: flex;
   flex-direction: column;
 }
+
+.filter-price-group {
+  display: flex;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.filter-price-group .pricemax,
+.filter-price-group .pricemin {
+  width: 158px;
+}
+
 
 /* Margins and Paddings*/
 
@@ -789,7 +806,12 @@ fieldset legend {
 }
 
 .nav-item:nth-child(2) {
-  margin-right: 248px;
+  margin-right: auto;
+}
+
+.nav-item:nth-child(3n),
+.nav-item:nth-child(4n) {
+  text-align: right;
 }
 
 .footer-right p {
@@ -834,10 +856,15 @@ fieldset legend {
   margin-bottom: 24px;
 }
 
+.fieldset-day-cost legend {
+  margin-bottom: 10px;
+}
+
 .fieldset-infrastructure,
 .fieldset-hotel-type,
 .fieldset-day-cost {
   padding: 0;
+  margin: 0;
 }
 
 .fieldset-infrastructure,
@@ -846,8 +873,12 @@ fieldset legend {
   margin-bottom: 24px;
 }
 
+.fieldset-hotel-type {
+  width: 367px;
+}
+
 .fieldset-infrastructure {
-  margin-left: 73px;
+  margin-left: 72px;
 }
 
 .fieldset-day-cost {
@@ -872,4 +903,83 @@ fieldset legend {
   left: 50%;
   transform: translateX(-50%);
   max-width: 138px;
+}
+
+/* Deco*/
+/*
+.range-controls {
+  position: relative;
+  height: 19px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--transparent-white);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toggle-gray);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-gray);
+  cursor: pointer;
+}
+
+.range-controls .toggle:hover {
+  top: 11px;
+  border: 9px solid var(--basic-white);
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 248px;
+}
+
+.filter-list label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-item-checkbox:hover + label,
+.filter-item-checkbox::focus + label {
+  color: var(--basic-black);
+}
+
+.filter-item-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/interface/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-item-checkbox:checked + label::before {
+  background-image: url("../img/interface/checkbox-on.svg");
+  width: 27px;
 }
