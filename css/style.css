@@ -3,8 +3,10 @@
   --basic-black: #000000;
   --transparent-black: rgba(0, 0, 0, .3);
   --black-logo: #231F20;
+  --shadow-black: rgba(0, 0, 0, .15);
   --basic-white: #FFFFFF;
   --transparent-white: rgba(255, 255, 255, 0.3);
+  --transparent-background: rgba(255, 255, 255, 0.9);
   --extra-black: #333333;
   --basic-blue: #81B3D2;
   --dark-blue: #669EC0;
@@ -123,7 +125,7 @@ button {
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  padding: 30px 124px;
+  padding: 30px 139px;
 }
 
 .btn:hover {
@@ -818,10 +820,10 @@ fieldset legend {
   margin-right: 8px;
 }
 
-.search-form {
+/*.search-form {
   padding: 55px;
   max-width: 568px;
-}
+}*/
 
 .childrens {
   margin-left: 53px;
@@ -896,13 +898,33 @@ fieldset legend {
 }
 
 /* Header Logo */
-/*
+
 .main-header-logo {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   max-width: 138px;
+}
+
+/* Search form*/
+
+.search-form-modal {
+  position: absolute;
+  left: 50%;
+  bottom: -158%;
+  transform: translateX(-50%);
+  margin: 0;
+  background-color: var(--basic-white);
+  padding: 55px;
+  max-width: 568px;
+    box-shadow: 0px 7px 15px var(--shadow-black);
+}
+
+.main-footer {
+  height: 120px;
+  margin-top: -120px;
+  background: var(--transparent-background);
 }
 
 /* Deco*/
