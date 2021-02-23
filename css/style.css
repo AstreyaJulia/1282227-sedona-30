@@ -116,8 +116,8 @@ button {
   text-transform: uppercase;
   border: none;
   padding: 3px 16px;
-  /* align-self: baseline;
-  text-align: center; защита от растягивания при изменении размера др кнопок*/
+  align-self: baseline;
+  text-align: center;
 }
 
 .btn-big,
@@ -176,6 +176,7 @@ button {
 
 .find-hotel button {
   max-width: 568px;
+  margin: 0 auto;
 }
 
 .btn-control {
@@ -329,6 +330,8 @@ button {
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+  margin: 30px 450px;
+  margin-top: 58px;
 }
 
 .find-hotel p:not(.find-header) {
@@ -412,8 +415,9 @@ button {
   background-color: transparent;
   border: none;
   padding: 4px 0;
-  /*border: 2px solid var(--basic-white);
-  border-radius: 2px;*/
+  color: var(--basic-white);
+  text-align: center;
+  font-size: 14px;
 }
 
 .hotels-filter input::placeholder {
@@ -421,6 +425,10 @@ button {
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.hotels-filter input:focus::placeholder {
+  color: transparent;
 }
 
 .hotel-name {
@@ -499,8 +507,8 @@ fieldset legend {
   line-height: 21px;
   background-color: var(--light-gray);
   padding: 3px 13px;
-  /* align-self: baseline;
-  text-align: center; защита от растягивания при изменении размера др кнопок*/
+  align-self: baseline;
+  text-align: center;
 }
 
 .hotel-link img {
@@ -523,7 +531,7 @@ fieldset legend {
 .features-list {
   display: grid;
   grid-template-rows: repeat(4, min-content);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
 }
 
 .feature-item,
@@ -536,7 +544,7 @@ fieldset legend {
 .subfeature-list,
 .main-footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
 }
 
 .feature-item:nth-child(1) {
@@ -763,7 +771,6 @@ fieldset legend {
   width: 158px;
 }
 
-
 /* Margins and Paddings*/
 
 .promo h2 {
@@ -773,6 +780,7 @@ fieldset legend {
 }
 
 .promo p {
+  margin: 0 340px;
   margin-bottom: 51px;
 }
 
@@ -799,6 +807,7 @@ fieldset legend {
 
 .subfeature-item {
   padding-top: 60px;
+  max-width: 400px;
 }
 
 .subfeature-item p {
@@ -907,6 +916,7 @@ fieldset legend {
 
 .filter-price-group {
   width: 317px;
+  height: 32px;
 }
 
 .hotels-header p {
@@ -942,6 +952,11 @@ fieldset legend {
   height: 120px;
   margin-top: -120px;
   background: var(--transparent-background);
+  z-index: 9000;
+}
+
+.catalog .main-footer {
+  margin-top: 0;
 }
 
 /* Deco*/
@@ -983,6 +998,7 @@ fieldset legend {
 
 .range-controls .toggle:hover {
   top: 11px;
+  transform: translateX(-1px);
   border: 9px solid var(--basic-white);
 }
 
@@ -1018,8 +1034,17 @@ fieldset legend {
   background-position: 0 0;
 }
 
+.filter-item-checkbox:disabled+label::before {
+  background-image: url("../img/interface/checkbox-off-disabled.svg");
+}
+
 .filter-item-checkbox:checked+label::before {
   background-image: url("../img/interface/checkbox-on.svg");
+  width: 27px;
+}
+
+.filter-item-checkbox:checked:disabled+label::before {
+  background-image: url("../img/interface/checkbox-on-disabled.svg");
   width: 27px;
 }
 
@@ -1033,3 +1058,9 @@ fieldset legend {
   transform: translate(-50%, -50%);
   background: #fff;
 }
+
+.map {
+  width: 100%;
+  height: 594px;
+}
+
