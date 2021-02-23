@@ -113,30 +113,26 @@
         <h2>Найдено: 3</h2>
 
         <p>Сортировка:</p>
-        <ul class="sorting-list-type">
-          <li class="sorting-item"><a class="active" href="#">По цене</a></li>
-          <li class="sorting-item"><a href="#">По типу</a></li>
-          <li class="sorting-item"><a href="#">По рейтингу</a></li>
-        </ul>
+        <div class="sorting-list-type">
+          <button class="sorting-item active">По цене</button>
+          <button class="sorting-item">По типу</button>
+          <button class="sorting-item">По рейтингу</button>
+        </div>
 
         <p class="visually-hidden">Направление сортировки:</p>
-        <ul class="sorting-list-direction">
-          <li class="sorting-item sort-up">
-            <a>
+        <div class="sorting-list-direction">
+          <button class="sorting-item">
               <svg class="btn-sort" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L0 10h11L5.5 0z" />
               </svg>
-            </a>
-          </li>
-          <li class="sorting-item selected sort-down">
-            <a>
-              <svg class="btn-sort active" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"
+          </button>
+          <button class="sorting-item active">
+              <svg class="btn-sort" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"
                 style="transform: rotate(180deg);">
                 <path d="M5.5 0L0 10h11L5.5 0z" />
               </svg>
-            </a>
-          </li>
-        </ul>
+          </button>
+        </div>
 
       </header>
 
@@ -263,6 +259,7 @@
 
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>
