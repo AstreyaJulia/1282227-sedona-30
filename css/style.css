@@ -387,16 +387,18 @@ button {
 
 .search-form input {
   background-color: var(--light-gray);
-  border: none;
+  border: 2px solid var(--light-gray);
 }
 
 .search-form input:hover {
   background-color: var(--active-gray);
+  border-color: var(--active-gray);
 }
 
 .search-form input:focus {
   background-color: var(--basic-white);
-  border: 2px solid var(--active-gray);
+  font-size: 21px;
+  line-height: 21px;
 }
 
 .search-form button[type="submit"] {
@@ -423,7 +425,6 @@ button {
 .hotels-filter input::placeholder {
   color: var(--basic-white);
   font-size: 14px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -597,12 +598,7 @@ fieldset legend {
 .search-form-input-group input:focus {
   background-color: var(--basic-white);
   border: 2px solid var(--focus-gray);
-  outline: none;
-  height: 21px;
-}
-
-.search-form-input-group.number input:focus {
-  width: 33px;
+  height: 24px;
 }
 
 .search-form .btn-blue {
@@ -610,17 +606,35 @@ fieldset legend {
 }
 
 .search-form input[type="text"] {
-  padding: 6px;
+  padding: 5px;
   padding-left: 13px;
   width: 346px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-form input[type="text"]:focus {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.search-form input[type="text"]:focus::placeholder {
+  color: transparent;
 }
 
 .number input[type="text"] {
-  padding: 6px 0;
-  width: 37px;
+  padding: 5px 0;
+  width: 34px;
+  text-align: center;
 }
 
-.number ::placeholder {
+.number input::placeholder {
+  text-align: center;
+}
+
+.number input:focus {
   text-align: center;
 }
 
@@ -768,7 +782,13 @@ fieldset legend {
 
 .filter-price-group .pricemax,
 .filter-price-group .pricemin {
-  width: 158px;
+  width: 80px;
+}
+
+.filter-price-group label {
+  font-size: 14px;
+  padding-left: 60px;
+  padding-top: 6px;
 }
 
 /* Margins and Paddings*/
@@ -936,10 +956,14 @@ fieldset legend {
 
 /* Search form*/
 
+.search-form {
+  position: relative;
+}
+
 .search-form-modal {
   position: absolute;
   left: 50%;
-  bottom: -158%;
+  bottom: 227px;
   transform: translateX(-50%);
   margin: 0;
   background-color: var(--basic-white);
@@ -1056,11 +1080,10 @@ fieldset legend {
   width: 2px;
   height: 22px;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: var(--basic-white);
 }
 
 .map {
   width: 100%;
   height: 594px;
 }
-

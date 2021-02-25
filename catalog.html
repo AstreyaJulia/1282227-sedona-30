@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/fav/fav32.svg" type="image/svg+×ml">
+  <link rel="icon" href="img/fav/fav32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/fav/fav152.png">
   <link rel="manifest" href="manifest.webmanifest">
   <meta charset="utf-8">
@@ -25,7 +25,7 @@
           <li class="nav-item"><a href="index.html">Информация</a></li>
           <li class="nav-item"><a href="#">Фото и видео</a></li>
           <li class="nav-item"><a href="#">Карта штата</a></li>
-          <li class="nav-item"><a class="active" href="catalog.html" class="selected">Гостиницы</a></li>
+          <li class="nav-item"><a class="selected" href="catalog.html">Гостиницы</a></li>
         </ul>
       </div>
     </nav>
@@ -48,7 +48,7 @@
                 <label for="parking">Парковка</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" class="visually-hidden filter-item-checkbox" id="wifi">
+                <input type="checkbox" class="visually-hidden filter-item-checkbox" id="wifi" disabled>
                 <label for="wifi">Wi-Fi</label>
               </li>
             </ul>
@@ -66,7 +66,7 @@
               </li>
               <li class="filter-item">
                 <input type="checkbox" class="visually-hidden filter-item-checkbox" checked id="apartments"
-                  name="apartments">
+                  name="apartments" disabled>
                 <label for="apartments">Апартаменты</label>
               </li>
             </ul>
@@ -75,10 +75,10 @@
             <fieldset class="fieldset-day-cost">
               <legend>Стоимость в сутки (Р):</legend>
               <div class="filter-price-group">
-                <label for="pricemin" class="visually-hidden">Стоимость в сутки от:</label>
-                <input type="text" class="pricemin" id="pricemin" placeholder="от 0" name="pricemin">
-                <label for="pricemax" class="visually-hidden">Стоимость в сутки до:</label>
-                <input type="text" class="pricemax" id="pricemax" placeholder="До 3000" name="pricemin">
+                <label for="pricemin">От</label>
+                <input type="text" class="pricemin" id="pricemin" placeholder="0" name="pricemin">
+                <label for="pricemax">До</label>
+                <input type="text" class="pricemax" id="pricemax" placeholder="3000" name="pricemin">
               </div>
               <div class="range-controls">
                 <div class="scale">
@@ -238,5 +238,4 @@
   </footer>
   <script src="js/script.js"></script>
 </body>
-
 </html>
