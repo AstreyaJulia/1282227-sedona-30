@@ -1038,12 +1038,26 @@ fieldset legend {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+}
+
+.filter-item input[type="checkbox"]:focus{
+  outline:0;
 }
 
 .filter-item-checkbox:hover+label,
 .filter-item-checkbox::focus+label {
   color: var(--basic-black);
+}
+
+.filter-item input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+}
+
+.filter-item input[type="checkbox"]:focus + label {
+  outline: 2px solid var(--basic-black);
+  outline-offset: 8px;
 }
 
 .filter-item-checkbox+label::before {
@@ -1070,6 +1084,11 @@ fieldset legend {
 .filter-item-checkbox:checked:disabled+label::before {
   background-image: url("../img/interface/checkbox-on-disabled.svg");
   width: 27px;
+}
+
+.filter-item input[type="checkbox"]:focus {
+  outline: 2px var(--basic-black) solid;
+  outline-offset: 8px;
 }
 
 .filter-price-group::after {
