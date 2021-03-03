@@ -11,6 +11,7 @@
   --basic-blue: #81B3D2;
   --dark-blue: #669EC0;
   --shadow-blue: #5496BD;
+  --background-blue: #C0d6e4;
   --basic-brown: #766357;
   --dark-brown: #604E43;
   --shadow-brown: #503E33;
@@ -409,7 +410,7 @@ button {
 /* Catalog page*/
 
 .hotels-filter {
-  background-color: var(--dark-gray);
+  background-color: var(--dark-brown);
   background: url(../img/background.jpg) no-repeat;
 }
 
@@ -709,6 +710,7 @@ fieldset legend {
   background:
     url(../img/interface/promomask.svg) no-repeat 0 100%,
     url(../img/promo.jpg) no-repeat var(--mid-gray) center;
+  background-color: var(--background-blue);
   width: 100%;
   height: 509px;
   display: flex;
@@ -1040,8 +1042,8 @@ fieldset legend {
   cursor: pointer;
 }
 
-.filter-item input[type="checkbox"]:focus{
-  outline:0;
+.filter-item input[type="checkbox"]:focus {
+  outline: 0;
 }
 
 .filter-item-checkbox:hover+label,
@@ -1055,7 +1057,7 @@ fieldset legend {
   opacity: 0;
 }
 
-.filter-item input[type="checkbox"]:focus + label {
+.filter-item input[type="checkbox"]:focus+label span {
   outline: 2px solid var(--basic-black);
   outline-offset: 8px;
 }
@@ -1105,4 +1107,50 @@ fieldset legend {
 .map {
   width: 100%;
   height: 594px;
+}
+
+/* Animation, JS */
+
+.modal-hide {
+  display:none;
+}
+
+.modal-shown {
+  animation: show .5s;
+}
+
+.modal-error-animation {
+  animation: error .5s;
+}
+
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/*/
+@keyframes error {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* https://habr.com/ru/post/111793/ */
+@keyframes show {
+  0%	{
+    bottom: 0;
+    opacity: 0;
+  }
+	50%	{
+    bottom: 50px;
+    opacity: 0.5;
+  }
+	100%	{
+    bottom: 0;
+    opacity: 1;
+  }
 }

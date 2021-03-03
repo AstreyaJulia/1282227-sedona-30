@@ -19,7 +19,7 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-nav">
-      <a class="main-header-logo">
+      <a href="#" class="main-header-logo">
         <img src="img/logo.svg" alt="Логотип Седона" width="138" height="70">
       </a>
       <div class="container">
@@ -182,13 +182,13 @@
       </div>
       <label for="adults" class="adults">Взрослые:</label>
       <div class="search-form-input-group number">
-        <button type="button" class="btn-control" aria-label="Уменьшить количество взрослых">
+        <button type="button" class="btn-control js-minus-adults" aria-label="Уменьшить количество взрослых">
           <svg class="btn-count btn-minus" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h12v3H0z" />
           </svg>
         </button>
-        <input type="text" id="adults" name="adults" placeholder="2">
-        <button type="button" class="btn-control" aria-label="Увеличить количество взрослых">
+        <input type="text" id="adults" name="adults" placeholder="2" value="2">
+        <button type="button" class="btn-control js-plus-adults" aria-label="Увеличить количество взрослых">
           <svg class="btn-count btn-plus" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" />
@@ -197,13 +197,13 @@
     </div>
       <label for="childrens" class="childrens">Дети:</label>
       <div class="search-form-input-group number">
-        <button type="button" class="btn-control" aria-label="Уменьшить количество детей">
+        <button type="button" class="btn-control js-minus-children" aria-label="Уменьшить количество детей">
           <svg class="btn-count btn-minus" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h12v3H0z" />
           </svg>
         </button>
-        <input type="text" id="childrens" name="childrens" placeholder="2">
-        <button type="button" class="btn-control" aria-label="Увеличить количество детей">
+        <input type="text" id="childrens" name="childrens" placeholder="2" value="2">
+        <button type="button" class="btn-control js-plus-children" aria-label="Увеличить количество детей">
           <svg class="btn-count btn-plus" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" />
@@ -213,5 +213,6 @@
       <button type="submit" class="btn btn-blue">Найти</button>
     </form>
   </section>
+  <script src="js/index.min.js"></script>
 </body>
 </html>
