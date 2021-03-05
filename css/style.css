@@ -386,6 +386,10 @@ button {
   align-self: center;
 }
 
+/* Mozilla placeholder opacity fix*/
+/* https://github.com/necolas/normalize.css/issues/741 */
+::-moz-placeholder{opacity:1}
+
 .search-form input {
   background-color: var(--light-gray);
   border: 2px solid var(--light-gray);
