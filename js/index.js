@@ -14,9 +14,9 @@ var enddate = modalform.querySelector("#end-date");
 // var childcount = modalform.querySelector("#childrens");
 
 // Прячет модал формы поиска отелей на главном окне при полной загрузке содержимого страницы
-page.onload = function () {
-  modalform.classList.add("modal-hide");
-};
+//page.onload = function () {
+//  modalform.classList.add("modal-hide");
+//};
 
 // Переключение класса modal-hide модала формы поиска отелей на главном окне при нажатии на кнопку btnformopen
 btnformopen.addEventListener("click", function (evt) {

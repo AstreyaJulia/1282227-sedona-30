@@ -129,6 +129,11 @@ button {
   padding: 30px 139px;
 }
 
+.btn-big {
+  margin: 0 auto;
+  text-decoration: none;
+}
+
 .btn:hover {
   color: var(--basic-white);
 }
@@ -388,7 +393,9 @@ button {
 
 /* Mozilla placeholder opacity fix*/
 /* https://github.com/necolas/normalize.css/issues/741 */
-::-moz-placeholder{opacity:1}
+::-moz-placeholder {
+  opacity: 1
+}
 
 .search-form input {
   background-color: var(--light-gray);
@@ -1116,7 +1123,7 @@ fieldset legend {
 /* Animation, JS */
 
 .modal-hide {
-  display:none;
+  display: none;
 }
 
 .modal-shown {
@@ -1129,31 +1136,42 @@ fieldset legend {
 
 /* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/*/
 @keyframes error {
-  10%, 90% {
+
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
-  20%, 80% {
+
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
-  30%, 50%, 70% {
+
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
-  40%, 60% {
+
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
 
 /* https://habr.com/ru/post/111793/ */
 @keyframes show {
-  0%	{
+  0% {
     bottom: 0;
     opacity: 0;
   }
-	50%	{
+
+  50% {
     bottom: 50px;
     opacity: 0.5;
   }
-	100%	{
+
+  100% {
     bottom: 0;
     opacity: 1;
   }

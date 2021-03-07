@@ -102,14 +102,17 @@
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
       <p class="find-header">Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <button type="button" class="show-search btn btn-big btn-brown">Поиск гостиницы в Седоне</button>
+      <a class="show-search btn btn-big btn-brown" href="searchform.html">Поиск гостиницы в Седоне</a>
       <div class="map">
+      <noscript>
+      <img src="img/map.jpg" alt="Карта Седоны" width="1200" height="593">
+      </noscript>
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A69735c04ee2f1c58d2d7b873a65336cf736d800da2403b8edf5761530be303bb&amp;source=constructor"
           width="1200" height="594" style="border: 0;" title="Соединённые Штаты Америки, штат Аризона, Коконино-Каунти, Седона"></iframe>
       </div>
     </section>
-    <section class="search-form">
+    <section class="search-form modal-hide">
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
       <form class="search-form-modal" action="https://echo.htmlacademy.ru" method="POST">
         <label for="start-date" class="start-date">Дата заезда:</label>
