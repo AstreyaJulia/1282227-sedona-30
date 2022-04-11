@@ -9,7 +9,7 @@
 * Студент: [Юлия Латышева](https://up.htmlacademy.ru/htmlcss/30/user/1282227).
 * Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
-[Демо](https://astreyajulia.github.io/1282227-sedona-30/)
+[Страница проекта на GitHub Pages](https://astreyajulia.github.io/1282227-sedona-30/)
 
 ## Описание
 
