@@ -15,6 +15,9 @@
 Главная страница состоит из шапки, подвала, промо-блока с изображением, списка преимуществ, формы заявки и карты.
 Страница "Гостиницы" состоит из шапки, подвала, формы поиска гостиниц.
 
+<img src="https://github.com/AstreyaJulia/1282227-sedona-30/blob/master/preview.png" alt="Седона: Главная" style="width:100%;"/>
+<img src="https://github.com/AstreyaJulia/1282227-sedona-30/blob/master/preview1.png" alt="Седона: Гостиницы" style="width:100%;"/>
+
 ## Использовано
 
 - HTML
